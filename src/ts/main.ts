@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const primaryButton = new Button({
       text: "Click me!",
       type: "primary",
-      onClick: () => alert("Primary button clicked!"),
+      onClick: () => alert("Primary button clicked!xs"),
     });
 
     const secondaryButton = new Button({
