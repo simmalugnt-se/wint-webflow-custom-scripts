@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "watch": "vite",
     "preview": "vite preview",
-    "dev:watch": "vite"
+    "watch": "vite build --watch",
+    "dev:watch": "concurrently \"npm run watch\" \"npm run preview\""
   },
   "keywords": [],
   "author": "",
