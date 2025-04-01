@@ -14,9 +14,10 @@ A modern development environment for creating custom scripts and styles for Webf
 │       ├── components/    # Component-specific TypeScript files
 │       └── main.ts        # Main TypeScript file
 ├── dist/                  # Compiled output
-│   ├── index.html        # Test page
-│   ├── main.css          # Minified CSS
-│   └── main.js           # Compiled JavaScript
+│   ├── css/              # Compiled CSS files
+│   │   └── main.css      # Minified CSS
+│   └── js/               # Compiled JavaScript files
+│       └── main.js       # Minified JavaScript
 ├── package.json          # Project dependencies and scripts
 ├── tsconfig.json         # TypeScript configuration
 ├── vite.config.ts        # Vite configuration
@@ -31,7 +32,6 @@ A modern development environment for creating custom scripts and styles for Webf
 - CSS custom properties (variables) for theming
 - Automatic compilation and bundling
 - Watch mode for development
-- Automatic deployment to GitHub Pages
 - Local development server with hot reloading
 
 ## Getting Started
@@ -42,10 +42,10 @@ A modern development environment for creating custom scripts and styles for Webf
    npm install
    ```
 
-2. Development mode (watches for changes):
+2. Development mode with hot reloading:
 
    ```bash
-   npm run watch
+   npm run dev:watch
    ```
 
 3. Build for production:
@@ -56,22 +56,19 @@ A modern development environment for creating custom scripts and styles for Webf
 ## Available Scripts
 
 - `npm run dev` - Starts the local development server (http://localhost:3000)
-- `npm run build` - Builds both SCSS and TypeScript files
-- `npm run build:scss` - Builds only SCSS files
-- `npm run build:ts` - Builds only TypeScript files
-- `npm run watch` - Watches for changes in both SCSS and TypeScript files
-- `npm run watch:scss` - Watches for changes in SCSS files
-- `npm run watch:ts` - Watches for changes in TypeScript files
+- `npm run build` - Builds both SCSS and TypeScript files for production
+- `npm run watch` - Watches for changes and rebuilds automatically
 - `npm run preview` - Preview the production build locally
+- `npm run dev:watch` - Starts development server with hot reloading (recommended for development)
 
 ## Local Development
 
 To develop locally and test your changes:
 
-1. Start the development server:
+1. Start the development server with hot reloading:
 
    ```bash
-   npm run dev
+   npm run dev:watch
    ```
 
 2. The server will start at http://localhost:3000
@@ -79,8 +76,8 @@ To develop locally and test your changes:
 3. To use these files in your Webflow project during development:
 
    ```html
-   <link rel="stylesheet" href="http://localhost:3000/main.css" />
-   <script src="http://localhost:3000/main.js"></script>
+   <link rel="stylesheet" href="http://localhost:3000/css/main.css" />
+   <script src="http://localhost:3000/js/main.js"></script>
    ```
 
 4. Any changes you make to your SCSS or TypeScript files will automatically trigger a rebuild and refresh the browser.
@@ -144,13 +141,13 @@ To use these files in your Webflow project:
    ```html
    <link
      rel="stylesheet"
-     href="https://simmalugnt-se.github.io/wint-webflow-custom-scripts/main.css"
+     href="https://simmalugnt-se.github.io/wint-webflow-custom-scripts/css/main.css"
    />
    ```
 
 2. Add the JavaScript file to your Webflow project's custom code section:
    ```html
-   <script src="https://simmalugnt-se.github.io/wint-webflow-custom-scripts/main.js"></script>
+   <script src="https://simmalugnt-se.github.io/wint-webflow-custom-scripts/js/main.js"></script>
    ```
 
 ## Contributing
