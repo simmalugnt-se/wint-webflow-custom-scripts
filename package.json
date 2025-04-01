@@ -5,14 +5,10 @@
   "main": "dist/js/main.js",
   "scripts": {
     "dev": "vite",
-    "build:scss": "sass src/scss/main.scss dist/main.css --style compressed",
-    "build:ts": "tsc",
-    "build": "npm run build:scss && npm run build:ts",
-    "watch:scss": "sass src/scss/main.scss dist/main.css --watch",
-    "watch:ts": "tsc --watch",
-    "watch": "npm run watch:scss & npm run watch:ts",
+    "build": "vite build",
+    "watch": "vite",
     "preview": "vite preview",
-    "dev:watch": "concurrently \"npm run watch\" \"npm run dev\""
+    "dev:watch": "vite"
   },
   "keywords": [],
   "author": "",

@@ -1,10 +1,6 @@
 @use "sass:color";
-
-// Import variables first
-@import "variables";
-
-// Import components
-@import "components/button";
+@use "variables";
+@use "components/button";
 
 // Variables
 $primary-color: #007bff;

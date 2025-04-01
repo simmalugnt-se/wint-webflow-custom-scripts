@@ -12,8 +12,14 @@ export default defineConfig({
         main: "src/ts/main.ts",
       },
       output: {
-        entryFileNames: "main.js",
-        assetFileNames: "main.css",
+        entryFileNames: "js/[name].js",
+        chunkFileNames: "js/[name].js",
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name?.endsWith(".css")) {
+            return "css/[name][extname]";
+          }
+          return "[name][extname]";
+        },
       },
     },
   },
