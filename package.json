@@ -4,12 +4,14 @@
   "description": "Custom scripts and styles for Webflow",
   "main": "dist/main.js",
   "scripts": {
+    "dev": "vite",
     "build:scss": "sass src/scss/main.scss dist/main.css --style compressed",
     "build:ts": "tsc",
     "build": "npm run build:scss && npm run build:ts",
     "watch:scss": "sass src/scss/main.scss dist/main.css --watch",
     "watch:ts": "tsc --watch",
-    "watch": "npm run watch:scss & npm run watch:ts"
+    "watch": "npm run watch:scss & npm run watch:ts",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +19,7 @@
   "devDependencies": {
     "@types/node": "^20.11.24",
     "sass": "^1.71.1",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4"
   }
 }

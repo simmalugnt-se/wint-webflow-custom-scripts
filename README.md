@@ -14,10 +14,12 @@ A modern development environment for creating custom scripts and styles for Webf
 │       ├── components/    # Component-specific TypeScript files
 │       └── main.ts        # Main TypeScript file
 ├── dist/                  # Compiled output
+│   ├── index.html        # Test page
 │   ├── main.css          # Minified CSS
 │   └── main.js           # Compiled JavaScript
 ├── package.json          # Project dependencies and scripts
 ├── tsconfig.json         # TypeScript configuration
+├── vite.config.ts        # Vite configuration
 └── .gitignore           # Git ignore rules
 ```
 
@@ -29,6 +31,8 @@ A modern development environment for creating custom scripts and styles for Webf
 - CSS custom properties (variables) for theming
 - Automatic compilation and bundling
 - Watch mode for development
+- Automatic deployment to GitHub Pages
+- Local development server with hot reloading
 
 ## Getting Started
 
@@ -51,12 +55,35 @@ A modern development environment for creating custom scripts and styles for Webf
 
 ## Available Scripts
 
+- `npm run dev` - Starts the local development server (http://localhost:3000)
 - `npm run build` - Builds both SCSS and TypeScript files
 - `npm run build:scss` - Builds only SCSS files
 - `npm run build:ts` - Builds only TypeScript files
 - `npm run watch` - Watches for changes in both SCSS and TypeScript files
 - `npm run watch:scss` - Watches for changes in SCSS files
 - `npm run watch:ts` - Watches for changes in TypeScript files
+- `npm run preview` - Preview the production build locally
+
+## Local Development
+
+To develop locally and test your changes:
+
+1. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+2. The server will start at http://localhost:3000
+
+3. To use these files in your Webflow project during development:
+
+   ```html
+   <link rel="stylesheet" href="http://localhost:3000/main.css" />
+   <script src="http://localhost:3000/main.js"></script>
+   ```
+
+4. Any changes you make to your SCSS or TypeScript files will automatically trigger a rebuild and refresh the browser.
 
 ## Adding New Components
 
@@ -100,6 +127,30 @@ To add new npm packages:
 2. For TypeScript packages, you might need to install their type definitions:
    ```bash
    npm install --save-dev @types/package-name
+   ```
+
+## Deployment
+
+This project is automatically deployed to GitHub Pages when changes are pushed to the main branch. The compiled files are available at:
+
+```
+https://simmalugnt-se.github.io/wint-webflow-custom-scripts/
+```
+
+To use these files in your Webflow project:
+
+1. Add the CSS file to your Webflow project's custom code section:
+
+   ```html
+   <link
+     rel="stylesheet"
+     href="https://simmalugnt-se.github.io/wint-webflow-custom-scripts/main.css"
+   />
+   ```
+
+2. Add the JavaScript file to your Webflow project's custom code section:
+   ```html
+   <script src="https://simmalugnt-se.github.io/wint-webflow-custom-scripts/main.js"></script>
    ```
 
 ## Contributing
