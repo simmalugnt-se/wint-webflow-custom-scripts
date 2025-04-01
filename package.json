@@ -1,0 +1,22 @@
+{
+  "name": "wint-webflow-custom-scripts",
+  "version": "1.0.0",
+  "description": "Custom scripts and styles for Webflow",
+  "main": "dist/main.js",
+  "scripts": {
+    "build:scss": "sass src/scss/main.scss dist/main.css --style compressed",
+    "build:ts": "tsc",
+    "build": "npm run build:scss && npm run build:ts",
+    "watch:scss": "sass src/scss/main.scss dist/main.css --watch",
+    "watch:ts": "tsc --watch",
+    "watch": "npm run watch:scss & npm run watch:ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "sass": "^1.71.1",
+    "typescript": "^5.3.3"
+  }
+}
