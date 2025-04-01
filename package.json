@@ -2,7 +2,7 @@
   "name": "wint-webflow-custom-scripts",
   "version": "1.0.0",
   "description": "Custom scripts and styles for Webflow",
-  "main": "dist/main.js",
+  "main": "dist/js/main.js",
   "scripts": {
     "dev": "vite",
     "build:scss": "sass src/scss/main.scss dist/main.css --style compressed",
@@ -11,13 +11,15 @@
     "watch:scss": "sass src/scss/main.scss dist/main.css --watch",
     "watch:ts": "tsc --watch",
     "watch": "npm run watch:scss & npm run watch:ts",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:watch": "concurrently \"npm run watch\" \"npm run dev\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.24",
+    "concurrently": "^9.1.2",
     "sass": "^1.71.1",
     "typescript": "^5.3.3",
     "vite": "^5.1.4"
