@@ -20,3 +20,4 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(secondaryButton.render());
   }
 });
+
