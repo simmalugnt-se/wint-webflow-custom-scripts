@@ -11,20 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!validComponent) {
     console.warn("⚠️ Walkthrough slot missing valid component");
-
-    const warning = document.createElement("div");
-    warning.innerHTML = `
-      <strong>⚠️ Incorrect Component!</strong> Only use <em>Walkthrough Item</em> in this slot.
-    `;
-    warning.style.cssText = `
-      background: #fff3cd;
-      color: #856404;
-      border: 2px dashed #856404;
-      padding: 1rem;
-      margin: 1rem 0;
-      font-weight: bold;
-    `;
-    slot.prepend(warning);
   }
 
   const container = document.querySelector(".container");
