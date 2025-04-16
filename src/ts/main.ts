@@ -4,14 +4,14 @@ import { Button } from "./components/Button";
 document.addEventListener("DOMContentLoaded", () => {
   console.log('js running')
 
-  const slot = document.querySelector('[data-slot="walkthrough"]');
-  if (!slot) return;
+  // const slot = document.querySelector('[data-slot="walkthrough"]');
+  // if (!slot) return;
 
-  const validComponent = slot.querySelector('[data-component="walkthrough-item"]');
+  // const validComponent = slot.querySelector('[data-component="walkthrough-item"]');
 
-  if (!validComponent) {
-    console.warn("⚠️ Walkthrough slot missing valid component");
-  }
+  // if (!validComponent) {
+  //   console.warn("⚠️ Walkthrough slot missing valid component");
+  // }
 
   const container = document.querySelector(".container");
   if (container) {
