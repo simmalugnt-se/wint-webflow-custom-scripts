@@ -2,6 +2,7 @@ import "../scss/main.scss";
 import { Button } from "./components/Button";
 
 document.addEventListener("DOMContentLoaded", () => {
+  console.log('js running')
   const container = document.querySelector(".container");
   if (container) {
     const primaryButton = new Button({
